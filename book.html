@@ -1,0 +1,383 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Gutenberg project</title>
+		<meta name="description" content="">
+		<!-- fonts -->
+		<link rel="stylesheet" type="text/css" href="./assets/fonts/museo/stylesheet.css">
+		<link rel="stylesheet" type="text/css" href="./assets/fonts/playfair/stylesheet.css">
+
+		<!-- Scrips -->
+		<script type="text/javascript" src="./assets/scripts/jquery.js"></script>
+		<script type="text/javascript" src="./assets/scripts/custom.js"></script>
+
+		<!-- website style -->
+		<link rel="stylesheet" type="text/css" href="./assets/css/general.css">
+	</head>
+	<body class="toLeft">
+		<header>
+			<img src="./assets/images/hero.png" class="hero" alt="books image">
+			<div class="container">
+				<nav class="padding reset">
+					<a href="index.php" class="logo"><img src="./assets/images/logo.png" alt="Gutenberg Project"></a>
+					<!-- desktop menu -->
+					<ul class="desktop">
+						<li>
+							<a href="generic-page.php">
+								<b>Library</b>
+								<small>Browse the catalog</small>
+							</a>
+							<!-- submenu -->	
+							<ul>
+								<li><a href="generic-page.php">Offline Library</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="generic-page.php">
+								<b>FAQ</b>
+								<small>Questions</small>
+							</a>
+						</li>
+						<li>
+							<a href="generic-page.php">
+								<b>About</b>
+								<small>More about us</small>
+							</a>
+							<!-- submenu -->	
+							<ul>
+								<li><a href="generic-page.php">Audio Book Project</a></li>
+								<li><a href="generic-page.php">CD &amp; DVD Project</a></li>
+								<li><a href="generic-page.php">Sheet Music Project</a></li>
+								<li><a href="generic-page.php">Partners and Affiliates</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="generic-page.php">
+								<b>Updates</b>
+								<small>News from the blog</small>
+							</a>
+							<!-- submenu -->	
+							<ul>
+								<li><a href="generic-page.php">Newsletter</a></li>
+								<li><a href="generic-page.php">Facebook</a></li>
+								<li><a href="generic-page.php">Twitter</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="generic-page.php">
+								<b>Contibute</b>
+								<small>How you can help</small>
+							</a>
+							<!-- submenu -->	
+							<ul>
+								<li><a href="generic-page.php">Submit your book</a></li>
+								<li><a href="generic-page.php">Add missing pages</a></li>
+								<li><a href="generic-page.php">Donate</a></li>
+								<li><a href="generic-page.php">Promote</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="generic-page.php">
+								<b>Contacts</b>
+								<small>Get in touch</small>
+							</a>
+						</li>
+					</ul>
+				</nav>
+
+				<form method="get" action="search.php" class="reset">
+					<div class="grid5 padding">
+						<div class="fields reset">
+							<input class="grid3" name="search_text" type="text" placeholder="what are you looking for?">
+							<div class="grid1">
+								<select class="grid6" name="search_categories">
+									<option value="all">All Categories</option>
+									<script type="text/javascript">
+										pg_categories('options');
+									</script>
+								</select>
+							</div>
+							<div class="grid1">
+								<select class="grid6" name="search_language">
+									<option value="all">All languages</option>
+									<option value="Deutsch">Deutsch</option>
+									<option value="English">English</option>
+									<option value="Francais">Francais</option>
+									<option value="Italiano">Italiano</option>
+									<option value="Portogues">Portogues</option>
+								</select>
+							</div>
+							<div class="grid1">
+								<select class="grid6" name="seach_order">
+									<option value="date">Order by date</option>
+									<option value="date">Order by popularity</option>
+									<option value="date">Order by author</option>
+									<option value="date">Order by language</option>
+								</select>
+							</div>
+								
+						</div>
+					</div>
+					<div class="grid1 padding">
+						<button class="button">Search</button>
+					</div>
+				</form>
+
+			</div>
+		</header>
+
+		<!-- contents -->
+		<div class="container contents_container reset">
+
+			<nav class="grid6 padding breadcrumb"> 
+				<a href="index.php">Home Page</a> &rsaquo; <a href="browse.php">Browse books</a> &rsaquo; <a href="browse-category.php">Fantasy</a> &rsaquo; <span><a href="">Sample book title</a></span>
+			</nav>
+
+			<div class="grid2">
+				<!-- categories list -->
+				<section class="book">
+					<div class="book-preview reset">
+						<div class="grid3 padding cover">
+							<img src="./assets/images/books/title1.jpg" alt="cover for Book title">
+						</div>
+						<div class="grid3 padding qr">
+							<div class="padding">
+								<small>View from mobile</small>
+								<img src="./assets/images/qrcode.png" alt="view this page from mobile">
+							</div>
+						</div>
+					</div>
+						
+					<div class="get-book padding">
+						<a href="" class=" button">Read online</a>
+
+						<div class="download">
+							<label for="download_format">Or select a format to download</label>
+							<select name="download_format" id="download_format">
+								<option value="pdf">PDF</option>
+								<option value="epub_t">EPUB with images</option>
+								<option value="epub_f">EPUB without images</option>
+								<option value="kindle_t">Kindle with images</option>
+								<option value="kindle_f">Kindle without images</option>
+							</select>
+						</div>
+
+						<a href="http://amazon.com" class="button amazon">Buy Paperback</a>
+					</div>
+				</section>
+
+				<div class="donation padding small">
+					<div>
+						<p>Project Gutenberg's success is due to the hard work of thousands of volunteers over more than 30 years. Your donations make it possible to support these volunteers, and pay our few employees to continue the creation of free electronic texts.</p>
+						<div class="payment">
+							<a href="#" class="button">Donate</a>
+							<img src="./assets/images/cards.png" alt="type of payments accepted">
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="grid4">
+				<!-- Book information -->
+				<section class="information padding ">
+					<div class="title ">
+						<h2>Book Information</h2>
+					</div>
+					<table width="100%">
+						<tbody>
+							<tr>
+								<td>Title</td>
+								<td>Sample Book Title</td>
+							</tr>
+							<tr>
+								<td>Author</td>
+								<td>Charlie Asemota</td>
+							</tr>
+							<tr>
+								<td>Language</td>
+								<td>Italian</td>
+							</tr>
+							<tr>
+								<td>Category</td>
+								<td>Prototype</td>
+							</tr>
+							<tr>
+								<td>eBook n.</td>
+								<td>45594</td>
+							</tr>
+							<tr>
+								<td>Online since</td>
+								<td>05/May/2014</td>
+							</tr>
+							<tr>
+								<td>Copyright</td>
+								<td>Design by Wastronauts Media</td>
+							</tr>
+							<tr>
+								<td>N. of downloads</td>
+								<td>3000</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+
+				<!-- social media share -->
+				<section class="social padding">
+					<div class="title">
+						<h2>Share this book</h2>
+					</div>
+					<div class="share-link">
+						<!-- AddThis Button BEGIN -->
+						<div class="addthis_toolbox addthis_default_style ">
+						<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+						<a class="addthis_button_tweet"></a>
+						<a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+						<a class="addthis_counter addthis_pill_style"></a>
+						</div>
+						<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-5390795802ca2adf"></script>
+						<!-- AddThis Button END -->
+					</div>
+				</section>
+
+				<!-- similar books -->
+				<section class="related books reset">
+					<div class="title padding grid6">
+						<h2>Similar books <a href="browse.php">Other books in this category &rsaquo;</a></h2>
+					</div>
+					<!-- Books list -->
+					<article class="grid1-4 padding book">
+						<div class="cover">
+							<img src="./assets/images/books/title1.jpg" alt="cover for Book title">
+						</div>
+						<div class="info">
+							<h3><a href="book.php">Sample book title</a></h3>
+							<ul>
+								<li>Category: <a href="browse-category.php">Fantasy</a></li>
+								<li>Year: 1990</li>
+								<li>Language: English</li>
+							</ul>
+						</div>
+					</article>
+					<article class="grid1-4 padding book">
+						<div class="cover">
+							<img src="./assets/images/books/title2.jpg" alt="cover for Book title">
+						</div>
+						<div class="info">
+							<h3><a href="book.php">Sample book title</a></h3>
+							<ul>
+								<li>Category: <a href="browse-category.php">Fantasy</a></li>
+								<li>Year: 1990</li>
+								<li>Language: English</li>
+							</ul>
+						</div>
+					</article>
+					<article class="grid1-4 padding book">
+						<div class="cover">
+							<img src="./assets/images/books/title3.jpg" alt="cover for Book title">
+						</div>
+						<div class="info">
+							<h3><a href="book.php">Sample book title</a></h3>
+							<ul>
+								<li>Category: <a href="browse-category.php">Fantasy</a></li>
+								<li>Year: 1990</li>
+								<li>Language: English</li>
+							</ul>
+						</div>
+					</article>
+					<article class="grid1-4 padding book hide-on-tablet">
+						<div class="cover">
+							<img src="./assets/images/books/title4.jpg" alt="cover for Book title">
+						</div>
+						<div class="info">
+							<h3><a href="book.php">Sample book title</a></h3>
+							<ul>
+								<li>Category: <a href="browse-category.php">Fantasy</a></li>
+								<li>Year: 1990</li>
+								<li>Language: English</li>
+							</ul>
+						</div>
+					</article>
+				</section>
+
+				<!-- referal downloaded -->
+				<section class="referal books reset">
+					<div class="title padding grid6">
+						<h2>You might also love these <a href="http://amazon.com">More on amazon &rsaquo;</a></h2>
+					</div>
+					<!-- Books list -->
+					<article class="grid1-4 padding book">
+						<div class="cover">
+							<img src="./assets/images/books/title1.jpg" alt="cover for Book title">
+						</div>
+						<div class="info">
+							<h3><a href="http://amazon.com">Sample book title</a></h3>
+							<ul>
+								<li>Category: <a href="browse-category.php">Fantasy</a></li>
+								<li>Year: 1990</li>
+								<li>Language: English</li>
+							</ul>
+						</div>
+					</article>
+					<article class="grid1-4 padding book">
+						<div class="cover">
+							<img src="./assets/images/books/title2.jpg" alt="cover for Book title">
+						</div>
+						<div class="info">
+							<h3><a href="http://amazon.com">Sample book title</a></h3>
+							<ul>
+								<li>Category: <a href="browse-category.php">Fantasy</a></li>
+								<li>Year: 1990</li>
+								<li>Language: English</li>
+							</ul>
+						</div>
+					</article>
+					<article class="grid1-4 padding book">
+						<div class="cover">
+							<img src="./assets/images/books/title3.jpg" alt="cover for Book title">
+						</div>
+						<div class="info">
+							<h3><a href="http://amazon.com">Sample book title</a></h3>
+							<ul>
+								<li>Category: <a href="browse-category.php">Fantasy</a></li>
+								<li>Year: 1990</li>
+								<li>Language: English</li>
+							</ul>
+						</div>
+					</article>
+					<article class="grid1-4 padding book hide-on-tablet">
+						<div class="cover">
+							<img src="./assets/images/books/title4.jpg" alt="cover for Book title">
+						</div>
+						<div class="info">
+							<h3><a href="book.php">Sample book title</a></h3>
+							<ul>
+								<li>Category: <a href="browse-category.php">Fantasy</a></li>
+								<li>Year: 1990</li>
+								<li>Language: English</li>
+							</ul>
+						</div>
+					</article>
+				</section>
+
+			</div>
+
+		</div>
+
+		<footer>
+			<div class="container padding reset">
+				<nav>
+					<ul>
+						<li><a href="generic-page.php">Copiryght</a></li>
+						<li><a href="generic-page.php">Terms and Conditions</a></li>
+						<li><a href="generic-page.php">Privacy Policy</a></li>
+						<li><a href="generic-page">Credits</a></li>
+					</ul>
+				</nav>
+				<div class="signature">Published by <a href="http://wastronauts.com">Wastronauts Media</a></div>
+			</div>
+		</footer>
+	</body>
+</html>

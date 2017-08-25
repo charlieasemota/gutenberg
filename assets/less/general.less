@@ -1,0 +1,566 @@
+/*!
+ *  Gutenberg Project Redesign by @CharlieAsemota - http://wastronauts.com - http://charlieasemota.net
+ *  Copyright Wastronauts Media - ALL RIGHT RESERVED
+ */
+/* ////////////////////
+SKELETON
+//////////////////// */
+
+@import "skeleton";
+
+/* ////////////////////
+VARIABLES
+//////////////////// */
+
+// color scheme
+@lightGreen: #76c177;
+@lightGreenHover: lighten(#76c177, 10%);
+@darkGreen: #324f33;
+@darkGreenHover: darken(#324f33, 10%);
+@lightGrey: #eeeeee;
+@amazonBlue: #5f4cc3;
+
+// dimentions
+@BookCoverHeight: 220px;
+
+@images: "../images"; // images directory
+
+/* ////////////////////
+SITE STYLES
+//////////////////// */
+
+// general styles
+* {font-family: 'Museo', arial, sans-serif;}
+body 
+{
+	font-size: 15px;
+	color: #333;
+}
+a 
+{
+	color: @darkGreen;
+	text-decoration: underline;
+}
+p, ul 
+{
+	line-height: 25px;
+	margin-bottom: 10px;
+}
+hr
+{
+	width: 100%;
+	clear: both;
+	border: none;
+	height: 1px;
+	background: #ccc;
+}
+
+// ui  elements
+.button 
+{
+	text-align: center;
+	color: @darkGreen;
+	background: @lightGreen;
+	display: block;
+	width: 100%;
+	border: none;
+	border-radius: 3px;
+	font-size: 15px;
+	padding: 15px 0;
+	cursor: pointer;
+	text-decoration: none;
+
+	&:hover 
+	{
+		background: @lightGreenHover;
+		color: @darkGreenHover;
+	}
+}
+
+
+.show-on-tablet {display: none;}
+
+
+// pages style
+header 
+{
+	position: relative;
+	padding: 60px 0 80px;
+	overflow: hidden;
+	color: #fff;
+	text-align: center;
+
+	img.hero 
+	{
+		position: absolute;
+		z-index: 1;
+		min-width: 100%;
+		min-height: 100%;
+		height: auto;
+		width: auto;
+		top: 0;
+		left:0;
+	}
+	.container 
+	{
+		position: relative;
+		z-index: 2;
+	}
+	nav
+	{
+		margin-bottom: 60px;
+		text-align: left;
+
+		.logo 
+		{
+			display: inline-block;
+		}
+		ul.mobile {display: none;}
+		ul 
+		{
+			display: inline-block;
+			float: right;
+
+			> li 
+			{
+				display: inline-block;
+				margin-left: 20px;
+				padding-bottom: 10px;
+
+				a 
+				{
+					color: #fff;
+					text-decoration: none;
+					display: block;
+
+					b 
+					{
+						display: block;
+						font-size: 18px;
+					}
+					small {font-size: 12px;}
+				}
+				ul
+				{
+					display: none;
+					position: absolute;
+					background: #fff;
+					padding-top: 10px;
+					border-radius: 3px;
+					margin-top: 5px;
+					border: 1px solid #000;
+
+					&:before 
+					{
+						transform: rotate(-45deg);
+						-webkit-transform: rotate(-45deg);
+						-ms-transform: rotate(-45deg);
+						content: "";
+						display: block;
+						width: 10px;
+						height: 10px;
+						background: #fff;
+						border-top: 1px solid #000;
+						border-right: 1px solid #000;
+						position: absolute;
+						top: -6px;
+						left: 10px;
+					}
+					li 
+					{
+						margin-left: 0;
+						display: block;
+
+						a 
+						{
+							color: @darkGreen;
+							padding: 0 20px;
+
+							&:hover {color: #000;}
+						}
+					}
+				} 
+				&:hover ul {display: block;}
+			}
+		}
+	}
+	h1 
+	{
+		font-family: 'playfair', georgia, serif;
+		font-weight: normal;
+		color: @lightGreen;
+		font-size: 92px;
+		margin-bottom: 40px;
+		text-transform: capitalize;
+		span {font-family: 'playfair', georgia, serif;}
+	}
+	h3
+	{
+		font-weight: normal;
+		font-size: 18px;
+		margin-bottom: 40px;
+	}
+	form 
+	{
+		.fields 
+		{
+			border: 2px solid @lightGreen;
+			border-radius: 3px;
+			padding: 10px 20px;
+			background: #fff;
+
+			input 
+			{
+				font-size: 18px;
+				color: #444;
+				border: 0;
+			}
+			.grid1 
+			{
+				padding-left: 10px;
+
+				select 
+				{
+					border: 1px solid #ccc;
+					height: 25px;
+					padding: 5px;
+					line-height: 25px;
+					background: #fff;
+				}
+			}
+		}
+	}
+	p
+	{
+		margin-top: 40px;
+		a {color: @lightGreen;}
+	}
+}
+
+.contents_container 
+{
+	padding: 60px 0;
+	position: relative;
+	
+	.breadcrumb 
+	{
+		margin-bottom: 40px;
+	}
+	section 
+	{
+		margin-bottom: 40px;
+
+		.title
+		{
+			h2 
+			{
+				font-size: 18px;
+				padding-bottom: 20px;
+				border-bottom: 1px solid #000;
+				margin-bottom: 40px;
+				position: relative;
+
+				&:before
+				{
+					transform: rotate(-45deg);
+					-webkit-transform: rotate(-45deg);
+					-ms-transform: rotate(-45deg);
+					content: "";
+					display: block;
+					width: 10px;
+					height: 10px;
+					background: #fff;
+					border-top: 1px solid #000;
+					border-right: 1px solid #000;
+					position: absolute;
+					bottom: -6px;
+					left: 10px;
+				}
+				a 
+				{
+					font-size: 12px;
+					font-weight: normal;
+					float: right;
+				}
+			}
+		}
+		&.book 
+		{
+			.book-preview
+			{
+				margin-bottom: 40px;
+
+				.cover 
+				{
+					overflow: hidden;
+					height: @BookCoverHeight;
+					position: relative;
+					
+					img
+					{
+						width: 100%;
+						height: 100%;
+						position: relative;
+					}
+				}
+				.qr 
+				{
+					div 
+					{
+						background: @lightGrey;
+						height: 220px;
+						padding: 20px;
+						text-align: center;
+						border-radius: 3px;
+
+						small 
+						{
+							margin-bottom: 20px;
+							font-size: 12px;
+							display: block;
+						}
+					}
+				}
+			}
+			.get-book
+			{
+				> * {margin-bottom: 40px}
+
+				.download 
+				{
+					background: @lightGrey;
+					padding: 20px 40px;
+					text-align: center;
+
+					select 
+					{
+						display: block;
+						background: #fff;
+						border: 1px solid #ccc;
+						width: 100%;
+						height: 30px;
+						margin-top: 15px;
+						padding: 7px 5px;
+					}
+				}
+				.amazon 
+				{
+					color: #fff;
+					background: @amazonBlue;
+
+					&:hover {background: darken(@amazonBlue, 10%)}
+				}
+			}
+		}
+		&.information 
+		{
+			table tr td
+			{
+				padding: 10px 0;
+				border-bottom: 1px solid #ccc;
+			}
+		}
+		&.recent-news
+		{
+			h3 
+			{
+				font-size: 18px;
+				margin-bottom: 20px;
+			}
+			article 
+			{
+				margin-bottom: 40px;
+			}
+		}
+		&.news 
+		{
+			article
+			{
+				margin-bottom: 40px;
+
+				h3
+				{
+					font-size: 24px;
+					margin-bottom: 10px;
+				}
+				small 
+				{
+					font-size: 12px;
+					display: block;
+					margin-bottom: 20px;
+				}
+			}
+		}
+		&.newsletter 
+		{
+			input 
+			{
+				border-radius: 3px;
+				border: 1px solid #ccc;
+				padding: 10px;
+				font-size: 15px; 
+			}
+		}
+		&.books 
+		{
+			.book
+			{
+				margin-bottom: 40px;
+
+				.cover 
+				{
+					overflow: hidden;
+					height: @BookCoverHeight;
+					margin-bottom: 20px;
+					position: relative;
+					
+					img 
+					{
+						width: 100%;
+						height: 100%;
+						position: relative;
+					}
+				}
+				.info
+				{
+					h3 
+					{
+						font-size: 18px;
+						margin-bottom: 20px;
+					}
+				}
+			}
+		}
+		&.browse
+		{
+			.categories
+			{
+				select 
+				{
+					border: 1px solid #ccc;
+					height: 30px;
+					padding: 7.5px;
+					line-height: 25px;
+					background: #fff;
+					width: 100%;
+					margin-bottom: 40px;
+				}
+			}
+		}
+		&.pagination 
+		{
+			nav
+			{
+				b,a 
+				{
+					border-radius: 3px;
+					padding: 5px 10px;
+				}
+				
+				b 
+				{
+					background: @lightGrey;
+					
+				}
+				a 
+				{
+					background: @lightGreenHover;
+					text-decoration: none;
+
+					&.selected {background: @lightGreen;}
+					&:hover 
+					{
+						background: @darkGreen;
+						color: #fff;
+					}
+				}
+			}
+		}
+		&.faq-sections
+		{
+			a 
+			{
+				padding: 5px 10px;
+				text-decoration: none;
+				display: block;
+				background: @lightGrey;
+				margin-bottom: 10px;
+				border-radius: 3px;
+
+				&.selected 
+				{
+					background: @lightGreen;
+					color: #fff;
+				}
+			}
+		}
+		&.faq 
+		{
+			a[href="#q"] {font-weight: bold;}
+			.answer {display: none;}
+		}
+	}
+	.donation 
+	{
+		> div 
+		{
+			border-radius: 3px;
+			background: @lightGrey;
+			padding: 50px 30px;
+			margin-bottom: 40px;
+
+			h1
+			{
+				font-size: 30px;
+				margin-bottom: 20px;
+			}
+			.payment 
+			{
+				text-align: center;
+				.button 
+				{
+					margin-bottom: 20px;
+					padding: 20px 0;
+					font-size: 18px;
+				}
+			}
+		}
+		&.small
+		{
+			> div 
+			{
+				padding: 40px;
+				.button {margin-top: 20px;}
+			}
+		}
+			
+	}
+}
+
+footer 
+{
+	background: @lightGrey;
+	padding: 40px 0;
+
+	nav ul
+	{
+		float:left;
+
+		li 
+		{
+			margin-right: 20px;
+			display: inline-block;
+		}
+	}
+	.signature {float: right;}
+	a {text-decoration: none;}
+}
+
+nav#responsive-menu {display: none;}
+
+
+/* ////////////////////
+RESPONSIVE
+//////////////////// */
+
+@import "responsive"; // images directory

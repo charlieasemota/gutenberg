@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Gutenberg project</title>
+		<meta name="description" content="">
+		<!-- fonts -->
+		<link rel="stylesheet" type="text/css" href="./assets/fonts/museo/stylesheet.css">
+		<link rel="stylesheet" type="text/css" href="./assets/fonts/playfair/stylesheet.css">
+
+		<!-- Scrips -->
+		<script type="text/javascript" src="./assets/scripts/jquery.js"></script>
+		<script type="text/javascript" src="./assets/scripts/custom.js"></script>
+
+		<!-- website style -->
+		<link rel="stylesheet" type="text/css" href="./assets/css/general.css">
+	</head>
+	<body class="toLeft">
+		<header>
+			<img src="./assets/images/hero.png" class="hero" alt="books image">
+			<div class="container">
+				<nav class="padding reset">
+					<a href="index.php" class="logo"><img src="./assets/images/logo.png" alt="Gutenberg Project"></a>
+					<!-- desktop menu -->
+					<ul class="desktop">
+						<li>
+							<a href="generic-page.php">
+								<b>Library</b>
+								<small>Browse the catalog</small>
+							</a>
+							<!-- submenu -->	
+							<ul>
+								<li><a href="generic-page.php">Offline Library</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="generic-page.php">
+								<b>FAQ</b>
+								<small>Questions</small>
+							</a>
+						</li>
+						<li>
+							<a href="generic-page.php">
+								<b>About</b>
+								<small>More about us</small>
+							</a>
+							<!-- submenu -->	
+							<ul>
+								<li><a href="generic-page.php">Audio Book Project</a></li>
+								<li><a href="generic-page.php">CD &amp; DVD Project</a></li>
+								<li><a href="generic-page.php">Sheet Music Project</a></li>
+								<li><a href="generic-page.php">Partners and Affiliates</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="generic-page.php">
+								<b>Updates</b>
+								<small>News from the blog</small>
+							</a>
+							<!-- submenu -->	
+							<ul>
+								<li><a href="generic-page.php">Newsletter</a></li>
+								<li><a href="generic-page.php">Facebook</a></li>
+								<li><a href="generic-page.php">Twitter</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="generic-page.php">
+								<b>Contibute</b>
+								<small>How you can help</small>
+							</a>
+							<!-- submenu -->	
+							<ul>
+								<li><a href="generic-page.php">Submit your book</a></li>
+								<li><a href="generic-page.php">Add missing pages</a></li>
+								<li><a href="generic-page.php">Donate</a></li>
+								<li><a href="generic-page.php">Promote</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="generic-page.php">
+								<b>Contacts</b>
+								<small>Get in touch</small>
+							</a>
+						</li>
+					</ul>
+				</nav>
+
+				<form method="get" action="search.php" class="reset">
+					<div class="grid5 padding">
+						<div class="fields reset">
+							<input class="grid3" name="search_text" type="text" placeholder="what are you looking for?">
+							<div class="grid1">
+								<select class="grid6" name="search_categories">
+									<option value="all">All Categories</option>
+									<script type="text/javascript">
+										pg_categories('options');
+									</script>
+								</select>
+							</div>
+							<div class="grid1">
+								<select class="grid6" name="search_language">
+									<option value="all">All languages</option>
+									<option value="Deutsch">Deutsch</option>
+									<option value="English">English</option>
+									<option value="Francais">Francais</option>
+									<option value="Italiano">Italiano</option>
+									<option value="Portogues">Portogues</option>
+								</select>
+							</div>
+							<div class="grid1">
+								<select class="grid6" name="seach_order">
+									<option value="date">Order by date</option>
+									<option value="date">Order by popularity</option>
+									<option value="date">Order by author</option>
+									<option value="date">Order by language</option>
+								</select>
+							</div>
+								
+						</div>
+					</div>
+					<div class="grid1 padding">
+						<button class="button">Search</button>
+					</div>
+				</form>
+
+			</div>
+		</header>
+
+		<!-- contents -->
+		<div class="container contents_container reset">
+			
+			<div class="grid2 padding">
+				<!-- FAQ SECTIONS -->
+				<section class="faq-sections">
+					<div class="title">
+						<h2>FAQ Sections</h2>
+					</div>
+					<nav>
+						<ul>
+							<li><a href="">Bookmarks</a></li>
+							<li><a href="#answers" class="selected">Copyright</a></li>
+							<li><a href="">File Formats</a></li>
+							<li><a href="">General</a></li>
+							<li><a href="">HTML</a></li>
+							<li><a href="">Readers</a></li>
+							<li><a href="">Scanning</a></li>
+							<li><a href="">Tools</a></li>
+							<li><a href="">Volunteers</a></li>
+							<li><a href="">Word Processors</a></li>
+						</ul>
+					</nav>
+				</section>
+			</div>
+
+			<div class="grid4">
+				<!-- Generic page template  -->
+				<section class="faq padding" id="answers">
+					<div class="title ">
+						<h2>Copyright FAQ</h2>
+					</div>
+					
+					<!-- Page questions -->
+					<p><a href="#q">What is copyright?</a></p>
+					<div class="answer">
+						<p>Copyright is a limited monopoly granted to the author of a work. It gives the author the exclusive right, among other things, to make copies of the work, hence the name.</p>
+					</div>
+					<hr>
+					<p><a href="#q">Does copyright differ from country to country? From state to state?</a></p>
+					<div class="answer">
+						<p>Copyright laws are constantly changing all over the world. Each country has its own copyright laws, some within the framework of international treaties, some not. Within the U.S., copyright laws are federal, and do not vary from state to state.</p>
+					</div>
+					<hr>
+					<p><a href="#q">What are the copyright laws outside the U.S.?</a></p>
+					<div class="answer">
+						<p>Sorry, we can't advise on copyright law outside the U.S. We can point you to resources like http://onlinebooks.library.upenn.edu/okbooks.html which tries to summarize the various copyright regimes, but we can't guarantee that these are accurate. Even when they are accurate, it is very hard to express some of the subtleties of copyright law in a summary — for example, the question of what constitutes "publication" for copyright purposes is sometimes unclear.</p>
+					</div>
+					<hr>
+					<p><a href="#q">Why does Project Gutenberg advise only on U.S. copyright issues?</a></p>
+					<div class="answer">
+						<p>The Project Gutenberg Literary Archive Foundation is registered in the U.S. as a 501(c)(3) organization, and our two posting servers are situated in the U.S., so we are subject to U.S. copyright law, and only to U.S. copyright law.</p>
+						<p>Because copyright laws are so tangled and different between countries, not only in the broad sweep but also in the detail, and because Project Gutenberg is subject only to U.S. copyright law, we just don't have the expertise, time or resources to research and advise on the law in other countries.</p>
+					</div>
+					<hr>
+					<p><a href="#q">I don't live in the U.S. Do these rules apply to me?</a></p>
+					<div class="answer">
+						<p>Your country's copyright laws are different from those in the U.S., and understanding and dealing with them is up to you. If you have a book that is in the public domain in your country, but not in the U.S., it is perfectly legal for you to publish it personally there, but we can't.</p>
+						<p>Similarly, it may be legal for us to publish it here, but not for you to publish it, or perhaps even copy it, where you are.</p>
+						<p>There are organizations in other countries operating in more liberal copyright regimes that may be able to publish texts that we cannot. For example, Project Gutenberg of Australia can accept some works not eligible in the U.S.</p>
+					</div>
+					<hr>
+					<p><a href="#q">What is the public domain?</a></p>
+					<div class="answer">
+						<p>The public domain is the set of cultural works that are free of copyright, and belong to everyone equally.</p>
+					</div>
+					<hr>
+					<p><a href="#q">What can I do with a text that is in the public domain?</a></p>
+					<div class="answer">
+						<p>Anything you want! You can copy it, publish it, change its format, distribute it for free or for money. You can translate it to other languages (and claim a copyright on your translation), write a play based on it (if it's a novel), or a novelization (if it's a play). You can take one of the characters from the novel and write a comic strip about him or her, or write a screenplay and sell that to make a movie.</p>
+						<p>You don't need to ask permission from anyone to do any of this. When a text is in the public domain, it belongs as much to you as to anyone.</p>
+						<p>(However, when some character or part of the work is also trademarked, as in the case of Tarzan, it may not be possible to release new works with that trademark, since trademark does not expire in the same way as copyright. If you propose to base new works on public domain material, you should investigate possible trademark issues first.)</p>
+					</div>
+					<hr>
+					<p><a href="#q">How does a book enter the public domain?</a></p>
+					<div class="answer">
+						<p>A book, or other copyrightable work, enters the public domain when its copyright lapses or when the copyright owner releases it to the public domain.</p>
+						<p>U.S. Government documents can never be copyrighted in the first place; they are "born" into the public domain.</p>
+						<p>There are certain other exceptional cases: for example, if a substantial number of copies were printed and distributed in the U.S. before March, 1989 without a copyright notice, and the work is of entirely American authorship, or was first published in the United States, the work is in the public domain in the U.S.</p>
+					</div>
+					<hr>
+					<p><a href="#q">How does a copyright lapse?</a></p>
+					<div class="answer">
+						<p>Copyrights are issued for limited periods. When that period is up, the book enters the public domain.</p>
+						<p>Copyrights can lapse in other ways. Some books published without a copyright notice, for example, have fallen into the public domain.</p>
+					</div>
+					<hr>
+					<p><a href="#q">What books are in the public domain?</a></p>
+					<div class="answer">
+						<p>Any book published anywhere before 1923 is in the public domain in the U.S. This is the rule we use most.</p>
+						<p>U.S. Government publications are in the public domain. This is the rule under which we have published, for example, presidential inauguration speeches.</p>
+						<p>Books can be released into the public domain by the owners of their copyrights.</p>
+						<p>Some books published without a copyright notice in the U.S. prior to March 1st, 1989 are in the public domain.</p>
+						<p>Some books published before 1964, and whose copyright was not renewed, are in the public domain.</p>
+						<p>If you want to rely on anything except the 1923 rule, things can get complicated, and the rules do change with time. Please refer to our Public Domain and Copyright How-To for more detailed information.</p>
+					</div>
+					<hr>
+
+					<script type="text/javascript">
+						$(document).ready(function(){
+							$('a[href="#q"]').click(function(event) {
+								$('.answer').slideUp('fast');
+								$(this).parent().next('.answer').slideDown('fast');
+								return false;
+							});
+						});
+					</script>
+
+				</section>
+
+			</div>
+
+		</div>
+
+		<footer>
+			<div class="container padding reset">
+				<nav>
+					<ul>
+						<li><a href="generic-page.php">Copiryght</a></li>
+						<li><a href="generic-page.php">Terms and Conditions</a></li>
+						<li><a href="generic-page.php">Privacy Policy</a></li>
+						<li><a href="generic-page">Credits</a></li>
+					</ul>
+				</nav>
+				<div class="signature">Published by <a href="http://wastronauts.com">Wastronauts Media</a></div>
+			</div>
+		</footer>
+	</body>
+</html>

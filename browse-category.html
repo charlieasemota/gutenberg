@@ -1,0 +1,517 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Gutenberg project</title>
+		<meta name="description" content="">
+		<!-- fonts -->
+		<link rel="stylesheet" type="text/css" href="./assets/fonts/museo/stylesheet.css">
+		<link rel="stylesheet" type="text/css" href="./assets/fonts/playfair/stylesheet.css">
+
+		<!-- Scrips -->
+		<script type="text/javascript" src="./assets/scripts/jquery.js"></script>
+		<script type="text/javascript" src="./assets/scripts/custom.js"></script>
+
+		<!-- website style -->
+		<link rel="stylesheet" type="text/css" href="./assets/css/general.css">
+	</head>
+	<body class="toLeft">
+		<header>
+			<img src="./assets/images/hero.png" class="hero" alt="books image">
+			<div class="container">
+				<nav class="padding reset">
+					<a href="index.php" class="logo"><img src="./assets/images/logo.png" alt="Gutenberg Project"></a>
+					<!-- desktop menu -->
+					<ul class="desktop">
+						<li>
+							<a href="generic-page.php">
+								<b>Library</b>
+								<small>Browse the catalog</small>
+							</a>
+							<!-- submenu -->	
+							<ul>
+								<li><a href="generic-page.php">Offline Library</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="generic-page.php">
+								<b>FAQ</b>
+								<small>Questions</small>
+							</a>
+						</li>
+						<li>
+							<a href="generic-page.php">
+								<b>About</b>
+								<small>More about us</small>
+							</a>
+							<!-- submenu -->	
+							<ul>
+								<li><a href="generic-page.php">Audio Book Project</a></li>
+								<li><a href="generic-page.php">CD &amp; DVD Project</a></li>
+								<li><a href="generic-page.php">Sheet Music Project</a></li>
+								<li><a href="generic-page.php">Partners and Affiliates</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="generic-page.php">
+								<b>Updates</b>
+								<small>News from the blog</small>
+							</a>
+							<!-- submenu -->	
+							<ul>
+								<li><a href="generic-page.php">Newsletter</a></li>
+								<li><a href="generic-page.php">Facebook</a></li>
+								<li><a href="generic-page.php">Twitter</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="generic-page.php">
+								<b>Contibute</b>
+								<small>How you can help</small>
+							</a>
+							<!-- submenu -->	
+							<ul>
+								<li><a href="generic-page.php">Submit your book</a></li>
+								<li><a href="generic-page.php">Add missing pages</a></li>
+								<li><a href="generic-page.php">Donate</a></li>
+								<li><a href="generic-page.php">Promote</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="generic-page.php">
+								<b>Contacts</b>
+								<small>Get in touch</small>
+							</a>
+						</li>
+					</ul>
+				</nav>
+
+				<form method="get" action="search.php" class="reset">
+					<div class="grid5 padding">
+						<div class="fields reset">
+							<input class="grid3" name="search_text" type="text" placeholder="what are you looking for?">
+							<div class="grid1">
+								<select class="grid6" name="search_categories">
+									<option value="all">All Categories</option>
+									<script type="text/javascript">
+										pg_categories('options');
+									</script>
+								</select>
+							</div>
+							<div class="grid1">
+								<select class="grid6" name="search_language">
+									<option value="all">All languages</option>
+									<option value="Deutsch">Deutsch</option>
+									<option value="English">English</option>
+									<option value="Francais">Francais</option>
+									<option value="Italiano">Italiano</option>
+									<option value="Portogues">Portogues</option>
+								</select>
+							</div>
+							<div class="grid1">
+								<select class="grid6" name="seach_order">
+									<option value="date">Order by date</option>
+									<option value="date">Order by popularity</option>
+									<option value="date">Order by author</option>
+									<option value="date">Order by language</option>
+								</select>
+							</div>
+								
+						</div>
+					</div>
+					<div class="grid1 padding">
+						<button class="button">Search</button>
+					</div>
+				</form>
+
+			</div>
+		</header>
+
+		<!-- contents -->
+		<div class="container contents_container reset">
+
+			<section class="browse books reset">
+				<div class="title padding grid6">
+					<h2>Books in "Fantasy" - Page 1</h2>
+				</div>
+
+				<div class="grid6 padding categories">
+					<form name="resp_category">
+						<p>Browse categories:</p>
+						<select onchange="return changePage();" name="category">
+							<script type="text/javascript">
+								pg_categories('responsive');
+							</script>
+						</select>
+					</form>
+				</div>
+
+				<!-- books list -->
+				<article class="grid1 padding book">
+					<div class="cover">
+						<img src="./assets/images/books/title1.jpg" alt="cover for Book title">
+					</div>
+					<div class="info">
+						<h3><a href="book.php">Sample book title</a></h3>
+						<ul>
+							<li>Category: <a href="browse-category.php">Fantasy</a></li>
+							<li>Year: 1990</li>
+							<li>Language: English</li>
+						</ul>
+					</div>
+				</article>
+				<article class="grid1 padding book">
+					<div class="cover">
+						<img src="./assets/images/books/title2.jpg" alt="cover for Book title">
+					</div>
+					<div class="info">
+						<h3><a href="book.php">Sample book title</a></h3>
+						<ul>
+							<li>Category: <a href="browse-category.php">Fantasy</a></li>
+							<li>Year: 1990</li>
+							<li>Language: English</li>
+						</ul>
+					</div>
+				</article>
+				<article class="grid1 padding book">
+					<div class="cover">
+						<img src="./assets/images/books/title3.jpg" alt="cover for Book title">
+					</div>
+					<div class="info">
+						<h3><a href="book.php">Sample book title</a></h3>
+						<ul>
+							<li>Category: <a href="browse-category.php">Fantasy</a></li>
+							<li>Year: 1990</li>
+							<li>Language: English</li>
+						</ul>
+					</div>
+				</article>
+				<article class="grid1 padding book">
+					<div class="cover">
+						<img src="./assets/images/books/title4.jpg" alt="cover for Book title">
+					</div>
+					<div class="info">
+						<h3><a href="book.php">Sample book title</a></h3>
+						<ul>
+							<li>Category: <a href="browse-category.php">Fantasy</a></li>
+							<li>Year: 1990</li>
+							<li>Language: English</li>
+						</ul>
+					</div>
+				</article>
+
+				<div class="reset show-on-tablet"></div>
+
+				<article class="grid1 padding book">
+					<div class="cover">
+						<img src="./assets/images/books/title1.jpg" alt="cover for Book title">
+					</div>
+					<div class="info">
+						<h3><a href="book.php">Sample book title</a></h3>
+						<ul>
+							<li>Category: <a href="browse-category.php">Fantasy</a></li>
+							<li>Year: 1990</li>
+							<li>Language: English</li>
+						</ul>
+					</div>
+				</article>
+				<article class="grid1 padding book">
+					<div class="cover">
+						<img src="./assets/images/books/title2.jpg" alt="cover for Book title">
+					</div>
+					<div class="info">
+						<h3><a href="book.php">Sample book title</a></h3>
+						<ul>
+							<li>Category: <a href="browse-category.php">Fantasy</a></li>
+							<li>Year: 1990</li>
+							<li>Language: English</li>
+						</ul>
+					</div>
+				</article>
+
+				<div class="reset hide-on-tablet"></div>
+
+				<article class="grid1 padding book">
+					<div class="cover">
+						<img src="./assets/images/books/title3.jpg" alt="cover for Book title">
+					</div>
+					<div class="info">
+						<h3><a href="book.php">Sample book title</a></h3>
+						<ul>
+							<li>Category: <a href="browse-category.php">Fantasy</a></li>
+							<li>Year: 1990</li>
+							<li>Language: English</li>
+						</ul>
+					</div>
+				</article>
+				<article class="grid1 padding book">
+					<div class="cover">
+						<img src="./assets/images/books/title4.jpg" alt="cover for Book title">
+					</div>
+					<div class="info">
+						<h3><a href="book.php">Sample book title</a></h3>
+						<ul>
+							<li>Category: <a href="browse-category.php">Fantasy</a></li>
+							<li>Year: 1990</li>
+							<li>Language: English</li>
+						</ul>
+					</div>
+				</article>
+
+				<div class="reset show-on-tablet"></div>
+
+				<article class="grid1 padding book">
+					<div class="cover">
+						<img src="./assets/images/books/title1.jpg" alt="cover for Book title">
+					</div>
+					<div class="info">
+						<h3><a href="book.php">Sample book title</a></h3>
+						<ul>
+							<li>Category: <a href="browse-category.php">Fantasy</a></li>
+							<li>Year: 1990</li>
+							<li>Language: English</li>
+						</ul>
+					</div>
+				</article>
+				<article class="grid1 padding book">
+					<div class="cover">
+						<img src="./assets/images/books/title2.jpg" alt="cover for Book title">
+					</div>
+					<div class="info">
+						<h3><a href="book.php">Sample book title</a></h3>
+						<ul>
+							<li>Category: <a href="browse-category.php">Fantasy</a></li>
+							<li>Year: 1990</li>
+							<li>Language: English</li>
+						</ul>
+					</div>
+				</article>
+				<article class="grid1 padding book">
+					<div class="cover">
+						<img src="./assets/images/books/title3.jpg" alt="cover for Book title">
+					</div>
+					<div class="info">
+						<h3><a href="book.php">Sample book title</a></h3>
+						<ul>
+							<li>Category: <a href="browse-category.php">Fantasy</a></li>
+							<li>Year: 1990</li>
+							<li>Language: English</li>
+						</ul>
+					</div>
+				</article>
+				<article class="grid1 padding book">
+					<div class="cover">
+						<img src="./assets/images/books/title4.jpg" alt="cover for Book title">
+					</div>
+					<div class="info">
+						<h3><a href="book.php">Sample book title</a></h3>
+						<ul>
+							<li>Category: <a href="browse-category.php">Fantasy</a></li>
+							<li>Year: 1990</li>
+							<li>Language: English</li>
+						</ul>
+					</div>
+				</article>
+
+				<div class="reset show-on-tablet"></div>
+				<div class="reset hide-on-tablet"></div>
+
+				<article class="grid1 padding book">
+					<div class="cover">
+						<img src="./assets/images/books/title1.jpg" alt="cover for Book title">
+					</div>
+					<div class="info">
+						<h3><a href="book.php">Sample book title</a></h3>
+						<ul>
+							<li>Category: <a href="browse-category.php">Fantasy</a></li>
+							<li>Year: 1990</li>
+							<li>Language: English</li>
+						</ul>
+					</div>
+				</article>
+				<article class="grid1 padding book">
+					<div class="cover">
+						<img src="./assets/images/books/title2.jpg" alt="cover for Book title">
+					</div>
+					<div class="info">
+						<h3><a href="book.php">Sample book title</a></h3>
+						<ul>
+							<li>Category: <a href="browse-category.php">Fantasy</a></li>
+							<li>Year: 1990</li>
+							<li>Language: English</li>
+						</ul>
+					</div>
+				</article>
+				<article class="grid1 padding book">
+					<div class="cover">
+						<img src="./assets/images/books/title3.jpg" alt="cover for Book title">
+					</div>
+					<div class="info">
+						<h3><a href="book.php">Sample book title</a></h3>
+						<ul>
+							<li>Category: <a href="browse-category.php">Fantasy</a></li>
+							<li>Year: 1990</li>
+							<li>Language: English</li>
+						</ul>
+					</div>
+				</article>
+				<article class="grid1 padding book">
+					<div class="cover">
+						<img src="./assets/images/books/title4.jpg" alt="cover for Book title">
+					</div>
+					<div class="info">
+						<h3><a href="book.php">Sample book title</a></h3>
+						<ul>
+							<li>Category: <a href="browse-category.php">Fantasy</a></li>
+							<li>Year: 1990</li>
+							<li>Language: English</li>
+						</ul>
+					</div>
+				</article>
+
+				<div class="reset show-on-tablet"></div>
+
+				<article class="grid1 padding book">
+					<div class="cover">
+						<img src="./assets/images/books/title1.jpg" alt="cover for Book title">
+					</div>
+					<div class="info">
+						<h3><a href="book.php">Sample book title</a></h3>
+						<ul>
+							<li>Category: <a href="browse-category.php">Fantasy</a></li>
+							<li>Year: 1990</li>
+							<li>Language: English</li>
+						</ul>
+					</div>
+				</article>
+				<article class="grid1 padding book">
+					<div class="cover">
+						<img src="./assets/images/books/title2.jpg" alt="cover for Book title">
+					</div>
+					<div class="info">
+						<h3><a href="book.php">Sample book title</a></h3>
+						<ul>
+							<li>Category: <a href="browse-category.php">Fantasy</a></li>
+							<li>Year: 1990</li>
+							<li>Language: English</li>
+						</ul>
+					</div>
+				</article>
+
+				<div class="reset hide-on-tablet"></div>
+
+				<article class="grid1 padding book">
+					<div class="cover">
+						<img src="./assets/images/books/title3.jpg" alt="cover for Book title">
+					</div>
+					<div class="info">
+						<h3><a href="book.php">Sample book title</a></h3>
+						<ul>
+							<li>Category: <a href="browse-category.php">Fantasy</a></li>
+							<li>Year: 1990</li>
+							<li>Language: English</li>
+						</ul>
+					</div>
+				</article>
+				<article class="grid1 padding book">
+					<div class="cover">
+						<img src="./assets/images/books/title4.jpg" alt="cover for Book title">
+					</div>
+					<div class="info">
+						<h3><a href="book.php">Sample book title</a></h3>
+						<ul>
+							<li>Category: <a href="browse-category.php">Fantasy</a></li>
+							<li>Year: 1990</li>
+							<li>Language: English</li>
+						</ul>
+					</div>
+				</article>
+
+				<div class="reset show-on-tablet"></div>
+
+				<article class="grid1 padding book">
+					<div class="cover">
+						<img src="./assets/images/books/title1.jpg" alt="cover for Book title">
+					</div>
+					<div class="info">
+						<h3><a href="book.php">Sample book title</a></h3>
+						<ul>
+							<li>Category: <a href="browse-category.php">Fantasy</a></li>
+							<li>Year: 1990</li>
+							<li>Language: English</li>
+						</ul>
+					</div>
+				</article>
+				<article class="grid1 padding book">
+					<div class="cover">
+						<img src="./assets/images/books/title2.jpg" alt="cover for Book title">
+					</div>
+					<div class="info">
+						<h3><a href="book.php">Sample book title</a></h3>
+						<ul>
+							<li>Category: <a href="browse-category.php">Fantasy</a></li>
+							<li>Year: 1990</li>
+							<li>Language: English</li>
+						</ul>
+					</div>
+				</article>
+				<article class="grid1 padding book">
+					<div class="cover">
+						<img src="./assets/images/books/title3.jpg" alt="cover for Book title">
+					</div>
+					<div class="info">
+						<h3><a href="book.php">Sample book title</a></h3>
+						<ul>
+							<li>Category: <a href="browse-category.php">Fantasy</a></li>
+							<li>Year: 1990</li>
+							<li>Language: English</li>
+						</ul>
+					</div>
+				</article>
+				<article class="grid1 padding book">
+					<div class="cover">
+						<img src="./assets/images/books/title4.jpg" alt="cover for Book title">
+					</div>
+					<div class="info">
+						<h3><a href="book.php">Sample book title</a></h3>
+						<ul>
+							<li>Category: <a href="browse-category.php">Fantasy</a></li>
+							<li>Year: 1990</li>
+							<li>Language: English</li>
+						</ul>
+					</div>
+				</article>
+
+			</section>
+
+			<section class="pagination padding">
+				<nav>
+					<b>Pages:</b>
+					<a href="">&lsaquo;</a>
+					<a href="" class="selected">1</a>
+					<a href="">2</a>
+					<a href="">3</a>
+					<a href="">4</a>
+					<a href="">&rsaquo;</a>
+				</nav>
+			</section>
+
+
+		</div>
+
+		<footer>
+			<div class="container padding reset">
+				<nav>
+					<ul>
+						<li><a href="generic-page.php">Copiryght</a></li>
+						<li><a href="generic-page.php">Terms and Conditions</a></li>
+						<li><a href="generic-page.php">Privacy Policy</a></li>
+						<li><a href="generic-page">Credits</a></li>
+					</ul>
+				</nav>
+				<div class="signature">Published by <a href="http://wastronauts.com">Wastronauts Media</a></div>
+			</div>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,375 @@
+@media screen and (max-width:1220px)
+{
+	// variables
+	@BookCoverHeight:170px;
+
+	// styles
+    .container {width:960px;}
+    .contents_container
+    {
+    	section
+    	{
+    		&.book 
+			{
+				.book-preview
+				{
+					.cover {height:@BookCoverHeight;}
+					.qr 
+					{
+						div {height: 170px;}
+					}
+				}
+			}
+			&.books 
+			{
+				.book
+				{
+					.cover {height: @BookCoverHeight;}
+				}
+			}
+    	}
+    }
+}
+
+@media screen and (max-width:980px)
+{
+	// variables
+	@BookCoverHeight:130px;
+
+	// styles
+    .container {width:700px;}
+    .padding {padding: 0 10px;}
+    body {font-size: 14px;}
+    p, ul 
+	{
+		line-height: 20px;
+		margin-bottom: 10px;
+	}
+    header
+    {
+    	padding: 40px 0 40px;
+
+    	nav
+    	{
+    		margin-bottom: 30px;
+
+    		ul.desktop {display: none;}
+    		ul.mobile {display: block;}
+    	}
+
+    	h1 
+		{
+			font-size: 82px;
+			margin-bottom: 40px;
+			text-transform: capitalize;
+
+			span 
+			{
+				display: block;
+				font-size: 58px;
+				margin-top: 10px;
+				letter-spacing: 2px;
+			}
+		}
+    	h3
+		{
+			font-size: 14px;
+			margin-bottom: 30px;
+		}
+		form 
+		{
+			.fields
+			{
+				input {font-size: 15px;}
+			}
+		}
+		p
+		{
+			margin-top: 30px;
+			span {display: none;}
+		}
+    }
+    .contents_container
+    {
+    	padding: 40px 0 0;
+
+    	section 
+    	{
+    		.title h2
+    		{
+    			margin-bottom: 20px;
+    			font-size: 16px;
+    		}
+
+    		&.category_list 
+    		{
+    			.grid3 {width: 100%;}
+    		}
+    		&.recent-news
+			{
+				h3 
+				{
+					font-size: 16px;
+				}
+			}
+			&.book 
+			{
+				.book-preview
+				{
+					margin-bottom: 20px;
+
+					.cover 
+					{
+						width: 100%;
+						height:270px;
+					}
+					.qr {display: none;}
+				}
+				.get-book
+				{
+					> * {margin-bottom: 20px}
+					.download {padding: 20px;}
+				}
+			}
+			&.books 
+			{
+				.book
+				{
+					margin-bottom: 20px;
+
+					.cover {height: @BookCoverHeight;}
+					.info
+					{
+						h3 
+						{
+							font-size: 16px;
+							margin-bottom: 10px;
+						}
+					}
+				}
+			}
+    	}
+    	.donation 
+		{
+			> div 
+			{
+				padding: 25px 15px;
+				margin-bottom: 40px;
+
+				h1 {font-size: 20px;}
+				.payment .button {padding: 15px 0;}
+			}
+			&.small
+			{
+				> div {padding: 20px;}
+			}
+		}
+    }
+    footer
+    {
+    	nav ul, .signature {float: none;}
+    }
+    nav#responsive-menu 
+    {
+	    > ul 
+	    {
+			display: block;
+			position: fixed;
+			background: rgba(0,0,0, .9);
+			height: 100%;
+			width: 100%;
+			overflow: auto;
+			text-align: center;
+			z-index: 400;
+			top: 0;
+			left: 0;
+			padding: 40px 0 40px;
+		}
+		ul li a 
+		{
+			display: block;
+			margin-bottom: 20px;
+			color: #fff;
+			text-decoration: none;
+			font-weight: bold;
+			text-transform: uppercase;
+
+			&.close_menu 
+			{
+				z-index: 401;
+				display: block;
+				text-align: center;
+				width: 100%;
+				color: #eee;
+				font-size: 12px;
+				text-decoration: none;
+				margin-bottom: 40px;
+				font-weight: normal;
+			}
+		}
+	}
+}
+
+@media screen and (max-width:720px)
+{
+    .container {width:500px;}
+    .large_tablet {width: 100%;}
+    .hide-on-tablet {display: none;}
+    .show-on-tablet {display: block;}
+    header
+    {
+    	form 
+    	{
+    		position: relative;
+
+    		> .grid5 
+    		{
+    			width: 100%;
+    			.fields
+    			{
+    				border: none;
+					padding: 0;
+					background: none;
+
+    				input 
+    				{
+    					border: 2px solid @lightGreen;
+						border-radius: 3px;
+						padding: 10px 10px;
+						background: #fff;
+						width: 100%;
+						height: 46px;
+						margin-bottom: 10px;
+
+    				}
+    				.grid1 
+    				{
+    					padding: 0;
+    					width: 33.333%;
+    				}
+    				.filter {display: none;}
+    				
+    			}
+    		}
+    		> .grid1 
+    		{
+    			width: 70px !important;
+    			position:absolute;
+    			right: 0;
+    			.button {padding: 13px 0;}
+    		}
+    		.open-filters 
+    		{
+    			a {color: @lightGreen;}
+    		}
+
+    	}
+    }
+    .contents_container
+    {
+    	section
+    	{
+    		&.category_list {
+    			select
+    			{
+    				border: 1px solid #ccc;
+					height: 30px;
+					padding: 7.5px;
+					line-height: 25px;
+					background: #fff;
+					width: 100%;
+    			}
+    		}
+    		&.browse 
+    		{
+    			.grid1 {width: 25%;}
+    		}
+    		&.book 
+			{
+				.book-preview
+				{
+					margin-bottom: 20px;
+
+					.cover 
+					{
+						height:230px;
+					}
+				}
+			}
+			&.referal, &.related 
+			{
+				.grid1-4 {width: 33.333%;}
+			}
+    	}
+    	.donation 
+    	{
+    		.grid4 
+    		{
+    			width: 100%; 
+    			margin-bottom: 10px;
+    		}
+    		.grid2 {width: 100%;}
+    	}
+    }
+}
+
+@media screen and (max-width:520px)
+{
+    [class^="grid"] {width:100% !important;}
+    .container {width:300px !important;}
+    header
+    {
+
+    	nav {margin-bottom: 20px;}
+    	h1 
+		{
+			font-size: 40px;
+			margin-bottom: 40px;
+
+			span 
+			{
+				font-size: 40px;
+				margin-top: 10px;
+			}
+		}
+    	h3, p {display: none;}
+    }
+    .contents_container 
+    {
+    	.cover {display: none;}
+    	
+    	nav.breadcrumb
+    	{ 
+    		margin-bottom: 20px;
+	    	span
+	    	{
+	    		display: block;
+	    		margin-top: 40px;
+	    		font-weight: bold;
+	    		font-size: 20px;
+	    	}
+	    }
+	    section 
+	    {
+	    	.title
+			{
+				h2 
+				{
+					a {display: none;}
+				}
+			}
+	    }
+    }
+    footer
+    {
+    	nav ul li 
+    	{
+    		display: block;
+    	}
+    }
+}
+
+@media screen and (max-width:320px)
+{
+	.container {width:90% !important;}
+}
